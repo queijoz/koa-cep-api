@@ -1,0 +1,30 @@
+{
+  "name": "koa-cep-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node src/server.js",
+    "dev": "NODE_ENV=development nodemon --exec babel-node src/server.js",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watchAll",
+    "perf": "npx autocannon -d 10 -c 20 http://localhost:3000/addresses/01001000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "koa": "^3.0.1",
+    "koa-router": "^14.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/node": "^7.28.0",
+    "@babel/preset-env": "^7.28.3",
+    "jest": "^30.0.5",
+    "nock": "^14.0.10",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  }
+}
